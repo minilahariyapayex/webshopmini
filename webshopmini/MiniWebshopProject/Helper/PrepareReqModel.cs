@@ -83,10 +83,16 @@
             return new PayeeInfo()
             {
                 payeeId = "ee8ecc78-edc0-489a-9590-6fbfc8274a70",
-                payeeReference = "AD111",
-                payeeName = "Mini Webshop",
+                payeeReference = "Ref" + GetRandomNumber(),
+                payeeName = "Mini Webshop"
 
             };
+        }
+
+        static string GetRandomNumber()
+        {
+            Random random = new Random();
+            return random.Next().ToString();
         }
         static List<OrderItem> GetOrderItems()
         {
